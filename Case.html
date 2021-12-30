@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #myCanvas {
+            background-color: pink;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="400" style="border: 1px solid red"></canvas>
+
+<script>
+
+
+
+
+
+    class Game {
+
+        constructor(x, y, width, height) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.raduis = 15;
+            // this.speed = 20;
+        }
+
+        circle(ctx) {
+            ctx.beginPath()
+            ctx.fillStyle = 'red'
+            ctx.arc(this.x, this.y, this.raduis, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        leftPaddlee(ctx) {
+            this.clear()
+            ctx.fillStyle = 'blue'
+            ctx.rect(this.x, this.y, this.width, this.height);
+            ctx.fill();
+
+        }
+
+        rightPaddlee(ctx) {
+            this.clear()
+
+            ctx.rect(this.x, this.y, this.width, this.height);
+            ctx.fill();
+
+        }
+
+        moveUp() {
+            // this.clear()
+            rightPaddle.y -= 10;
+            // this.rightPaddlee()
+        }
+
+        moveDown() {
+            // this.clear()
+            rightPaddle.y += 10;
+            // this.rightPaddlee()
+        }
+
+        clear() {
+            ctx.clearRect(0, 0, 800, 400);
+        }
+
+    }
+
+
+
+
+        let ctx = document.getElementById('myCanvas').getContext('2d');
+        let circle = new Game(400, 190)
+        let leftPaddle = new Game(20, 160, 15, 55)
+        let rightPaddle = new Game(765, 160, 15, 55)
+        circle.circle(ctx)
+        leftPaddle.leftPaddlee(ctx)
+        rightPaddle.rightPaddlee(ctx)
+
+     function move() {
+
+         // ctx.clearRect(0,0,800,400);
+         window.addEventListener('keyup', function (e) {
+
+             if (e.keyCode == 38) {
+                 console.log("truoc " + rightPaddle.y)
+                 rightPaddle.moveUp();
+                 console.log("sau " + rightPaddle.y)
+                 circle.clear();
+                 //rightPaddle = new Game(765, abc, 15, 55)
+                // rightPaddle.rightPaddlee(ctx)
+             }
+             // switch (e.keyCode) {
+             //     // console.log(e.keyCode)
+             //     case 38:
+             //
+             //         rightPaddle.moveUp();
+             //         console.log(rightPaddle.moveUp())
+             //         break;
+             //     case 40:
+             //         rightPaddle.moveDown();
+             //         break;
+             // }
+         })
+     }
+
+    // setInterval(move,100)
+    move()
+</script>
+
+
+</body>
+</html>
