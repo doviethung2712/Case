@@ -1,0 +1,20 @@
+#myCanvas {
+    width: 800px;
+    height: 400px;
+    border: 1px solid cornflowerblue;
+    display: block;
+    margin: auto;
+    background-color: black;
+    /*background: url(https://msmobile.com.vn/upload_images/images/hinh-nen-dep-cho-may-tinh-full-hd-2.jpg)*/
+}
+
+p {
+    font-size: 25px;
+    text-align: center;
+}
+
+input {
+    font-size: 25px;
+    display: block;
+    margin: auto;
+}

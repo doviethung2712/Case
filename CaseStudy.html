@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css.css">
+
+
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+<p>Left: <span id="left">0</span> |Right: <span id="right">0</span></p>
+<input type="button" value="Start" onclick="start()">
+<input type="button" value="Reset" onclick="reset()">
+
+
+<script src="object.js"></script>
+<script src="play.js"></script>
+<script src="event.js"></script>
+<script>
+    object()
+    text()
+
+    function start() {
+        if (checkStart == false) {
+            left = 0;
+            right = 0;
+            ball.dx = 1;
+            ball.dy = 1;
+            requestAnimationFrame(play)
+        }
+    }
+
+
+    function reset() {
+        if (check == true) {
+            check = false;
+            left = 0;
+            right = 0;
+            ball.dx = 1;
+            ball.dy = 1;
+            requestAnimationFrame(play)
+        }
+    }
+
+
+</script>
+</body>
+</html>
