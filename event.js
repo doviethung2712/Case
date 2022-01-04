@@ -6,10 +6,10 @@ window.addEventListener("keyup", function (e) {
         case 40:
             rightPaddle.dy = 0;
             break
-        case 81:
+        case 87:
             leftPaddle.dy = 0;
             break;
-        case 65:
+        case 83:
             leftPaddle.dy = 0;
     }
 })
@@ -17,16 +17,16 @@ window.addEventListener("keyup", function (e) {
 window.addEventListener("keydown", function (e) {
     switch (e.keyCode) {
         case 38:
-            rightPaddle.dy -= 3;
+            rightPaddle.dy -= speed;
             break;
         case 40:
-            rightPaddle.dy += 3;
+            rightPaddle.dy += speed;
             break
-        case 81:
-            leftPaddle.dy -= 3;
+        case 87:
+            leftPaddle.dy -= speed;
             break;
-        case 65:
-            leftPaddle.dy += 3;
+        case 83:
+            leftPaddle.dy += speed;
             break;
     }
 })

@@ -1,13 +1,12 @@
 #myCanvas {
-    width: 800px;
-    height: 400px;
     border: 1px solid cornflowerblue;
     display: block;
     margin: auto;
-    /*background-color: black;*/
-    background: url(img/backgruond.jpg);
+    background-color: #008000;
+    /*background: url(img/backgruond.jpg);*/
 }
-span{
+
+span {
     display: inline;
 }
 

@@ -4,6 +4,7 @@ function collides(obj1, obj2) {
         obj1.y < obj2.y + obj2.height &&
         obj1.y + obj1.r > obj2.y;
 }
+
 let checkStart = false;
 let check = false;
 let teamWin = "";
@@ -13,23 +14,23 @@ function play() {
     requestAnimationFrame(play)
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     object()
-    checkStart=true;
+    checkStart = true;
     if (check == false) {
         teamWin = ""
 
         leftPaddle.y += leftPaddle.dy;
         rightPaddle.y += rightPaddle.dy;
 
-        if (leftPaddle.y < 0) {
-            leftPaddle.y = 0
-        } else if (leftPaddle.y > 110) {
-            leftPaddle.y = 110
+        if (leftPaddle.y < length - length) {
+            leftPaddle.y = length - length
+        } else if (leftPaddle.y > canvas.height - length * 7) {
+            leftPaddle.y = canvas.height - length * 7
         }
 
-        if (rightPaddle.y < 0) {
-            rightPaddle.y = 0
-        } else if (rightPaddle.y > 110) {
-            rightPaddle.y = 110
+        if (rightPaddle.y < length - length) {
+            rightPaddle.y = length - length
+        } else if (rightPaddle.y > canvas.height - length * 7) {
+            rightPaddle.y = canvas.height - length * 7
         }
 
         ball.x += ball.dx;
@@ -38,17 +39,18 @@ function play() {
         if (ball.y < ball.r) {
             ball.y = ball.r;
             ball.dy *= -1;
-        } else if (ball.y > 145) {
-            ball.y = 145;
+        } else if (ball.y > canvas.height - ball.r) {
+            ball.y = canvas.height - ball.r;
             ball.dy *= -1;
         }
     } else {
+        ctx.font = "30px Verdana";
         color = ctx.createLinearGradient(0, 0, canvas.width, 0);
         color.addColorStop("0.2", "magenta");
         color.addColorStop("0.5", "blue");
         color.addColorStop("0.8", "red");
         ctx.fillStyle = color;
-        ctx.fillText(teamWin, 70, 90);
+        ctx.fillText(teamWin, 100, 100);
     }
 
 
@@ -81,25 +83,25 @@ function play() {
     let dem = left + right;
     if (dem == 4) {
         if (ball.dx > 0) {
-            ball.dx = 2;
+            ball.dx = 8;
         } else {
-            ball.dx = -2;
+            ball.dx = -8;
         }
         if (ball.dy > 0) {
-            ball.dy = 2;
+            ball.dy = 8;
         } else {
-            ball.dy = -2;
+            ball.dy = -8;
         }
-    } else if (dem == 8){
+    } else if (dem == 8) {
         if (ball.dx > 0) {
-            ball.dx = 4;
+            ball.dx = 14;
         } else {
-            ball.dx = -4;
+            ball.dx = -14;
         }
         if (ball.dy > 0) {
-            ball.dy = 4;
+            ball.dy = 14;
         } else {
-            ball.dy = -4;
+            ball.dy = -14;
         }
     }
 
