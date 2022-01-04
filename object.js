@@ -37,7 +37,7 @@ function object() {
     ctx.fillRect(rightPaddle.x, rightPaddle.y, rightPaddle.width, rightPaddle.height);
     ctx.closePath()
     ctx.beginPath();
-    ctx.fillStyle = 'white'
+    ctx.fillStyle = 'Pink'
     ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2);
     ctx.fill()
     ctx.closePath();
@@ -50,7 +50,7 @@ function text() {
     color.addColorStop("0.5", "blue");
     color.addColorStop("0.8", "red");
     ctx.fillStyle = color;
-    ctx.fillText("Bấm Start", 70, 90);
+    ctx.fillText("Start", 110, 90);
 }
 
 
