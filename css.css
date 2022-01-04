@@ -7,6 +7,9 @@
     /*background-color: black;*/
     background: url(img/backgruond.jpg);
 }
+span{
+    display: inline;
+}
 
 p {
     font-size: 25px;
