@@ -29,7 +29,6 @@ const ball = {
     dy: speed,
 };
 
-
 function object() {
     ctx.beginPath()
     ctx.fillStyle = '#FFCE54';
@@ -44,15 +43,6 @@ function object() {
     ctx.closePath();
 }
 
-// function text() {
-//     ctx.font = "30px Verdana";
-//     color = ctx.createLinearGradient(0, 0, canvas.width, 0);
-//     color.addColorStop("0.2", "magenta");
-//     color.addColorStop("0.5", "blue");
-//     color.addColorStop("0.8", "red");
-//     ctx.fillStyle = color;
-//     ctx.fillText("Start", 110, 90);
-// }
 
 
 

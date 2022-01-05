@@ -9,7 +9,6 @@ let checkStart = false;
 let check = false;
 let teamWin = "";
 
-
 function play() {
     requestAnimationFrame(play)
     ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -69,12 +68,10 @@ function play() {
 
     if (collides(ball, rightPaddle)) {
         document.getElementById('right').innerHTML = ++right;
-        // console.log(ball.dx + ':    1   :' + ball.dy)
         ball.dx *= -1;
         ball.x = rightPaddle.x - ball.r
     } else if (collides(ball, leftPaddle)) {
         document.getElementById('left').innerHTML = ++left;
-        // console.log(ball.dx + ':    2   :' + ball.dy)
         ball.dx *= -1;
         ball.x = leftPaddle.x + leftPaddle.width + ball.r
     }
