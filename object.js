@@ -32,9 +32,9 @@ const ball = {
 
 function object() {
     ctx.beginPath()
-    ctx.fillStyle = '#FF8C00';
+    ctx.fillStyle = '#FFCE54';
     ctx.fillRect(leftPaddle.x, leftPaddle.y, leftPaddle.width, leftPaddle.height);
-    ctx.fillStyle = '#FF8C00'
+    ctx.fillStyle = '#FFCE54'
     ctx.fillRect(rightPaddle.x, rightPaddle.y, rightPaddle.width, rightPaddle.height);
     ctx.closePath()
     ctx.beginPath();
