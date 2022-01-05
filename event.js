@@ -17,16 +17,16 @@ window.addEventListener("keyup", function (e) {
 window.addEventListener("keydown", function (e) {
     switch (e.keyCode) {
         case 38:
-            rightPaddle.dy -= speed;
+            rightPaddle.dy -= speed + 1;
             break;
         case 40:
-            rightPaddle.dy += speed;
+            rightPaddle.dy += speed + 1;
             break
         case 87:
-            leftPaddle.dy -= speed;
+            leftPaddle.dy -= speed + 1;
             break;
         case 83:
-            leftPaddle.dy += speed;
+            leftPaddle.dy += speed + 1;
             break;
     }
 })

@@ -5,13 +5,18 @@
     background-color: #1D6F5A;
 }
 
+div {
+    position: absolute;
+}
+
 span {
     display: inline;
 }
 
 p {
     font-size: 25px;
-    text-align: center;
+    left: 690px;
+    position: absolute;
 }
 
 input {

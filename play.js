@@ -49,7 +49,7 @@ function play() {
         color.addColorStop("0.5", "blue");
         color.addColorStop("0.8", "red");
         ctx.fillStyle = color;
-        ctx.fillText(teamWin, 100, 100);
+        ctx.fillText(teamWin, 420, 100);
     }
 
 
